@@ -1,0 +1,25 @@
+h1 Listing contact informations
+
+table
+  tr
+    th Person
+    th Phone
+    th Address
+    th
+    th
+    th
+
+  - @informations.each do |info|
+    tr
+      td = info.person_id
+      td = info.phone
+      td = info.address
+      td = link_to 'Show', info
+      td = link_to 'Edit', edit_contact_information_path(info)
+      td = link_to 'Destroy', info, confirm: 'Are you sure?', method: :delete
+
+br
+
+= link_to 'New Contact Information', new_contact_information_path
+br
+= link_to 'Home', root_url

@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong Brand:
+  = @car.brand
+p
+  strong Color:
+  = @car.color
+p
+  strong Delivery date:
+  = @car.delivery_date
+p
+  strong Date of sale:
+  = @car.date_of_sale
+p
+  strong Price:
+  = @car.price
+p
+  strong Status:
+  = @car.status_id
+p
+  strong Buyer:
+  = @car.buyer_id
+
+= link_to 'Edit', edit_car_path(@car)
+'|
+= link_to 'Back', cars_path

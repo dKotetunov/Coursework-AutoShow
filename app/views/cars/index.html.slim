@@ -1,0 +1,33 @@
+h1 Listing cars
+
+table
+  tr
+    th Brand
+    th Color
+    th Delivery date
+    th Date of sale
+    th Price
+    th Status
+    th Buyer
+    th
+    th
+    th
+
+  - @cars.each do |car|
+    tr
+      td = car.brand
+      td = car.color
+      td = car.delivery_date
+      td = car.date_of_sale
+      td = car.price
+      td = car.status_id
+      td = car.buyer_id
+      td = link_to 'Show', car
+      td = link_to 'Edit', edit_car_path(car)
+      td = link_to 'Destroy', car, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Car', new_car_path
+br
+= link_to 'Home', root_url

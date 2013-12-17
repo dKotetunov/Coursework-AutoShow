@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131217012346) do
+ActiveRecord::Schema.define(version: 20131217023136) do
+
+  create_table "cars", force: true do |t|
+    t.string   "brand"
+    t.string   "color"
+    t.string   "delivery_date"
+    t.string   "date_of_sale"
+    t.string   "price"
+    t.string   "status_id"
+    t.string   "buyer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "clients", force: true do |t|
     t.string   "person_id"
@@ -20,10 +32,24 @@ ActiveRecord::Schema.define(version: 20131217012346) do
     t.datetime "updated_at"
   end
 
+  create_table "contact_informations", force: true do |t|
+    t.string   "person_id"
+    t.integer  "phone"
+    t.string   "address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "people", force: true do |t|
     t.string   "first_name"
     t.string   "middle_name"
     t.string   "last_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "statuses", force: true do |t|
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

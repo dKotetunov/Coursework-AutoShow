@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Person:
+  = @information.person_id
+p
+  strong Phone:
+  = @information.phone
+p
+  strong Address:
+  = @information.address
+
+= link_to 'Edit', edit_contact_information_path(@information)
+'|
+= link_to 'Back', contact_informations_path
