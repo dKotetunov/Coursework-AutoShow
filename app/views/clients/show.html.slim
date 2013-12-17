@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Person:
+  = @client.person_id
+p
+  strong Car:
+  = @client.car_id
+
+= link_to 'Edit', edit_client_path(@client)
+'|
+= link_to 'Back', clients_path
