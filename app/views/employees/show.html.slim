@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Person:
+  = @employee.person_id
+p
+  strong Position:
+  = @employee.position_id
+p
+  strong Date of birth:
+  = @employee.date_of_birth
+p
+  strong Hire date:
+  = @employee.hire_date
+p
+  strong Salary:
+  = @employee.salary
+
+= link_to 'Edit', edit_employee_path(@employee)
+'|
+= link_to 'Back', employees_path

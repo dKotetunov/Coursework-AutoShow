@@ -1,0 +1,41 @@
+h1 Listing modifications
+
+table
+  tr
+    th Car
+    th Length
+    th Width
+    th Height
+    th Seats
+    th Weight
+    th Maximal speed
+    th Type of engine
+    th Engine capacity
+    th Fuel supply system
+    th Fuel consumption
+    th
+    th
+    th
+
+  - @modifications.each do |modification|
+    tr
+      td = modification.car_id
+      td = modification.length
+      td = modification.width
+      td = modification.height
+      td = modification.seats
+      td = modification.weight
+      td = modification.max_speed
+      td = modification.type_of_engine
+      td = modification.engine_capacity
+      td = modification.fuel_supply_system
+      td = modification.fuel_consumption
+      td = link_to 'Show', modification
+      td = link_to 'Edit', edit_modification_path(modification)
+      td = link_to 'Destroy', modification, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Modification', new_modification_path
+br
+= link_to 'Home', root_url

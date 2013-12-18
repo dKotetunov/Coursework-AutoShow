@@ -1,0 +1,39 @@
+p#notice = notice
+
+p
+  strong Car:
+  = @modification.car_id
+p
+  strong Length:
+  = @modification.length
+p
+  strong Width:
+  = @modification.width
+p
+  strong Height:
+  = @modification.height
+p
+  strong Seats:
+  = @modification.seats
+p
+  strong Weight:
+  = @modification.weight
+p
+  strong Maximal speed:
+  = @modification.max_speed
+p
+  strong Type of engine:
+  = @modification.type_of_engine
+p
+  strong Engine capacity:
+  = @modification.engine_capacity
+p
+  strong Fuel supply system:
+  = @modification.fuel_supply_system
+p
+  strong Fuel consumption:
+  = @modification.fuel_consumption
+
+= link_to 'Edit', edit_modification_path(@modification)
+'|
+= link_to 'Back', modifications_path

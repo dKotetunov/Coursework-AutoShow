@@ -1,0 +1,27 @@
+h1 Listing suppliers
+
+table
+  tr
+    th Car
+    th Phone
+    th Address
+    th Name
+    th
+    th
+    th
+
+  - @suppliers.each do |supplier|
+    tr
+      td = supplier.car_id
+      td = supplier.phone
+      td = supplier.address
+      td = supplier.name
+      td = link_to 'Show', supplier
+      td = link_to 'Edit', edit_supplier_path(supplier)
+      td = link_to 'Destroy', supplier, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Supplier', new_supplier_path
+br
+= link_to 'Home', root_url

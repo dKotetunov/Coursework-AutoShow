@@ -1,0 +1,27 @@
+h1 Listing buyers
+
+table
+  tr
+    th Person
+    th Car
+    th Employee
+    th Payment method
+    th
+    th
+    th
+
+  - @buyers.each do |buyer|
+    tr
+      td = buyer.person_id
+      td = buyer.car_id
+      td = buyer.employee_id
+      td = buyer.payment_method_id
+      td = link_to 'Show', buyer
+      td = link_to 'Edit', edit_buyer_path(buyer)
+      td = link_to 'Destroy', buyer, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Buyer', new_buyer_path
+br
+= link_to 'Home', root_url

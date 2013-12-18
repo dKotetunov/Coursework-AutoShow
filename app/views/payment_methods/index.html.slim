@@ -1,0 +1,21 @@
+h1 Listing payment_methods
+
+table
+  tr
+    th Title
+    th
+    th
+    th
+
+  - @payment_methods.each do |payment_method|
+    tr
+      td = payment_method.title
+      td = link_to 'Show', payment_method
+      td = link_to 'Edit', edit_payment_method_path(payment_method)
+      td = link_to 'Destroy', payment_method, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Payment method', new_payment_method_path
+br
+= link_to 'Home', root_url

@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131217023136) do
+ActiveRecord::Schema.define(version: 20131218021131) do
+
+  create_table "buyers", force: true do |t|
+    t.integer  "person_id"
+    t.integer  "car_id"
+    t.integer  "employee_id"
+    t.integer  "payment_method_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "cars", force: true do |t|
     t.string   "brand"
@@ -40,6 +49,38 @@ ActiveRecord::Schema.define(version: 20131217023136) do
     t.datetime "updated_at"
   end
 
+  create_table "employees", force: true do |t|
+    t.integer  "person_id"
+    t.integer  "position_id"
+    t.date     "date_of_birth"
+    t.date     "hire_date"
+    t.float    "salary"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "modifications", force: true do |t|
+    t.integer  "car_id"
+    t.integer  "length"
+    t.float    "width"
+    t.float    "height"
+    t.integer  "seats"
+    t.integer  "weight"
+    t.integer  "max_speed"
+    t.string   "type_of_engine"
+    t.float    "engine_capacity"
+    t.string   "fuel_supply_system"
+    t.integer  "fuel_consumption"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payment_methods", force: true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "people", force: true do |t|
     t.string   "first_name"
     t.string   "middle_name"
@@ -48,8 +89,23 @@ ActiveRecord::Schema.define(version: 20131217023136) do
     t.datetime "updated_at"
   end
 
+  create_table "positions", force: true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "statuses", force: true do |t|
     t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "suppliers", force: true do |t|
+    t.integer  "car_id"
+    t.integer  "phone"
+    t.string   "address"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,4 +1,16 @@
 AutoShow::Application.routes.draw do
+  resources :employees
+
+  resources :positions
+
+  resources :payment_methods
+
+  resources :buyers
+
+  resources :suppliers
+
+  resources :modifications
+
   resources :statuses
 
   resources :cars

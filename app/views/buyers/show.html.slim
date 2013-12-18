@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Person:
+  = @buyer.person_id
+p
+  strong Car:
+  = @buyer.car_id
+p
+  strong Employee:
+  = @buyer.employee_id
+p
+  strong Payment method:
+  = @buyer.payment_method_id
+
+= link_to 'Edit', edit_buyer_path(@buyer)
+'|
+= link_to 'Back', buyers_path
