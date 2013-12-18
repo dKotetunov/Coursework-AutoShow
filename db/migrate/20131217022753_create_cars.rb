@@ -3,11 +3,11 @@ class CreateCars < ActiveRecord::Migration
     create_table :cars do |t|
       t.string :brand
       t.string :color
-      t.string :delivery_date
-      t.string :date_of_sale
-      t.string :price
-      t.string :status_id
-      t.string :buyer_id
+      t.date :delivery_date
+      t.date :date_of_sale
+      t.float :price
+      t.integer :status_id
+      t.integer :buyer_id
 
       t.timestamps
     end
